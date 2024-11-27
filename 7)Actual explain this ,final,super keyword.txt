@@ -1,0 +1,55 @@
+7)explain this ,final,super keywords in java?
+
+1. this Keyword:
+================
+The this keyword is a reference to the current object—the object whose method or constructor is being called. It is primarily used in the following scenarios:
+
+Common Uses:
+Referencing Instance Variables:
+When a method or constructor has a parameter with the same name as an instance variable, this is used to differentiate between the instance variable and the parameter.
+Example:
+public class Example {
+    int num;
+
+    public Example(int num) {
+        this.num = num; // 'this.num' refers to the instance variable, 'num' refers to the parameter
+    }
+}
+
+Calling Another Constructor:
+this() can be used to call another constructor in the same class. This is known as constructor chaining.
+Example:
+public class Example {
+    int num;
+    
+    public Example() {
+        this(10); // Calls the constructor that takes an int parameter
+    }
+    
+    public Example(int num) {
+        this.num = num;
+    }
+}
+
+Passing the Current Object as an Argument:
+this can be used to pass the current object as an argument to another method or constructor.
+Example:
+public class Example {
+    public void display(Example obj) {
+        System.out.println("Method called");
+    }
+
+    public void callMethod() {
+        display(this); // Passes the current object
+    }
+}
+
+this: Refers to the current object. Used to differentiate between instance variables and parameters, call other constructors, and pass the current object as an argument.
+final: Used to create constants, prevent method overriding, and prevent inheritance. Applicable to variables, methods, and classes.
+super: Refers to the parent class. Used to call parent class constructors, access parent class methods, and access parent class variables.
+
+
+
+
+
+

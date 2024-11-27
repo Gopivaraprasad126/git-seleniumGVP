@@ -1,0 +1,93 @@
+1)Different waits some syntaxes in the selenium Webdriver
+---------------------------------------------------------
+implicityWait:
+=============
+driver.manage().timeOuts().implicitlyWait(Duration.ofSeconds(10));
+
+ExplicitlyWait:
+==============
+WebdriverWait wait = new WebdriverWait(driver,Duration.ofSeconds(20));
+WebElememt element = wait.until(ExpectedConditions.vicibilityOfElementLocated(By.id("exampleid")));
+
+element.click();
+
+FluentWait:
+===========
+
+FluentWait<WebDriver> wait = new FluentWait<>(driver)
+
+.withTimeout(Duaration.ofSeconds(30))
+.pollingEvery(Duration.ofSeconds(5))
+.ignoring(NoSuchElementException.Class);
+
+WebElement element = wait.until(ExpectedConditions.visibilityOfElementLcated(By.id("exampleid")));
+
+element.click();
+
+2)PAGE_UP and PAGE_DOWN actions on the webPage
+-----------------------------------------------
+
+a)By using Sendkeys
+===================
+driver.findElement(By.tagName("body")).sendKeys(keys.PAGE_UP);
+driver.findElement(By.tagName("body")).sendKeys(Keys.PAGE_DOWN);
+
+b)By using Actions Class
+=========================
+Actions act = new Actions(driver);
+act.sendKeys(Keys.PAGE_UP).perform();
+act.sendKeys(Keys.PAGE_DOWN).perform();
+
+c)By Using JavaScriptExecutor
+=============================
+JavaScriptExecutor js = (javascriptExecutor)driver;
+js.executeScript("windows.scrollBy(0,3000)");
+
+js.executeScript("windows.scrollBy(0,-document.body.scrollHeight)");
+
+d)By using robotclass
+=====================
+Robot robot = new Robot();
+robot.keyPress(KeyEvent.VK_PAGE_DOWN);
+robot.keyRelease(keyEvent.VK_PAGE_DOWN);
+
+robot.keyPress(KeyEvent.VK_PAGE_UP);
+robot.keyRelease(keyEvent.VK_PAGE_UP);
+
+e)particular element
+=====================
+WebElement element = driver.findElement(By.id("gvp"));
+Actions act = new Actions(driver);
+act.moveToElement(element).perform();
+
+
+JavaScriptExecutor js =(javaScriptExecutor)driver;
+js.executeDriver("argument[0].scrollIntoview(true);",element)
+
+
+3)mousehover and dragANdDrop on the Elements
+---------------------------------------------
+MouseHoverAction
+=================
+WebElement element = driver.findElement(By.id("gvp"));
+Actions act = new Actions(driver)
+act.moveToElement(element).perform();
+
+DragAndDrop
+===========
+// Locate the source element to drag
+WebElement sourceElement = driver.findElement(By.id("source-element-id"));
+
+// Locate the target element where the source element will be dropped
+WebElement targetElement = driver.findElement(By.id("target-element-id"));
+
+Actions act = new Actions(driver);
+act.clickAndHold(sourceElement).moveToElement(targetElement).release().perform();
+                          (or)
+act.dragAndDrop(SourceElement,targetElement).perform();
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+7)Access modifiers
+-----------------
+
+Summary of Access Levels:
+Modifier Class	Package	Subclass World
+public	 Yes	Yes	Yes	Yes
+protect	 Yes	Yes	Yes	No
+default	 Yes	Yes	No	No
+private	 Yes	No	No	No

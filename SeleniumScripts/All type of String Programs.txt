@@ -1,0 +1,229 @@
+All type of "String" Programs
+------------------------------
+ //1)reverse the String with palim check:
+==========================================
+public class Main{
+    public static void main(String[] args){
+        String str = "GvG";
+         String rev = "";
+         for(int i=str.length()-1;i>=0;i--){
+             rev +=str.charAt(i);
+         }
+         System.out.println(rev);
+         if(str.equals(rev)){
+             System.out.println("is palim");
+         }else{
+             System.out.println("its not a palim");
+         }
+    }
+}
+//2)reverse the each word of String:
+===================================
+public class Main{
+    public static void main(String[] args){
+        String str = "Gopi vara prasad";
+         String words[] = str.split(" ");
+         StringBuilder rs = new StringBuilder();
+         for(int i=words.length-1;i>=0;i--){
+             String parts = words[i];
+             rs.append(parts).append(" ");
+         }
+         System.out.println(rs.toString());
+    }   
+}
+//3)how many times occurance of a each word in a given String:
+==============================================================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        String str = "Gopi vara prasad Gopi";
+        String words[] = str.split(" ");
+         Map<String,Integer> ow = new HashMap<>();
+         for(String c:words){
+             if(ow.containsKey(c)){
+                 ow.put(c,ow.get(c)+1);
+             }else{
+                 ow.put(c,1);
+             }
+         }
+         System.out.println(ow);
+    }   
+}
+//4)count of a  words in a given String:
+========================================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        String str = "Gopi vara prasad Gopi";
+        String words[] = str.split(" ");
+         System.out.println(words.length);
+    }   
+}
+//5)no of permutations in String
+================================ 
+public class Main{
+    public static void main(String[] args){
+        String str = "abc";
+     permute(str, " ");
+    }
+  public static void permute(String str , String prefix ){
+      if(str.length() ==0){
+          System.out.println(prefix);
+      }
+      for(int i=0;i<str.length();i++){
+          String rem = str.substring(0,i)+str.substring(i+1);
+          permute(rem,prefix+str.charAt(i));
+      }
+  }
+ 
+ 
+}
+//6)two Strings anagrams or not:
+===============================
+public class Main{
+    public static void main(String[] args){
+        String str1 = "abc";
+        String str2 = "brca";
+        System.out.println(isanagram(str1,str2));
+    }
+    public static boolean isanagram(String str1,String str2){
+        if(str1.length()==str2.length()){
+            return true;
+        }
+        int[] charcount = new int[256];
+        for(int i=0;i<str1.length();i++){
+            charcount[str1.charAt(i)]++;
+            charcount[str2.charAt(i)]--;
+        }
+        for(int num :charcount){
+            if(num !=0){
+                return false;
+            }
+            
+        }
+         return true;   
+        }
+
+}
+//7)count vowels and constans in a string
+============================================
+public class Main{
+    public static void main(String[] args){
+      String str = "GopiVaraPrasad".toLowerCase();
+      String wv="";
+      int wc =0;
+      String wov="";
+      int woc=0;
+for(char c :str.toCharArray()){
+    if("aeiou".indexOf(c) !=-1){
+        wc++;
+        wv +=c;
+    }else{
+        woc++;
+        wov +=c;
+    }
+    
+}
+    System.out.println(wc+":"+wv);
+    System.out.println(woc+":"+wov);
+
+}
+}
+//8)unique characters in string:
+================================
+public class Main{
+    public static void main(String[] args){
+     String str= "Gopivaraprasad1234512345";
+     boolean[] unique = new boolean[128];//aschi
+     for(char c :str.toCharArray()){
+         if(!unique[c]){
+             unique[c] = true;
+             System.out.println(c+" ");
+         }
+     }
+}
+}
+//9)print even index of the string
+===================================
+public class Main{
+    public static void main(String[] args){
+     String str= "Gopivaraprasad";
+     for(int i=0;i<str.length();i++){
+         if(i%2==0){
+             System.out.print(str.charAt(i)+" ");
+         }
+     }
+         }
+     }
+//10)Remove spaces from the given String:
+=========================================
+public class Main{
+    public static void main(String[] args){
+     String str= "Gopi varap rasad";
+     for(int i=0;i<str.length();i++){
+         if(str.charAt(i) !=' '){
+             System.out.print(str.charAt(i));
+         }
+     }
+         }
+     }
+
+//11)print the every character double time in String
+====================================================
+public class Main{
+    public static void main(String[] args){
+     String str= "Gopivaraprasad";
+     StringBuffer rs = new StringBuffer();
+     for(int i=0;i<str.length();i++){
+         char v = str.charAt(i);
+         rs.append(v).append(v);
+     }
+     System.out.println(rs.toString());
+         }
+     }
+//12)Swap the String variables without using third variable
+============================================================
+public class Main{
+    public static void main(String[] args){
+        String s1="gopi";
+        String s2="varaprasad";
+        s1 =s1+s2;
+        s2 =s1.substring(0,s1.length()-s2.length());
+        s1 =s1.substring(s2.length());
+        System.out.println(s1 +":"+s2);
+    }
+}
+//13)Count the numbers&sum in the String
+=========================================
+public class Main{
+    public static void main(String[] args){
+        String s1="gopi1234";
+        int count =0;
+        int sum =0;
+        
+        for(char c :s1.toCharArray()){
+            if(Character.isDigit(c)){
+                count++;
+                sum +=Character.getNumericValue(c);
+            }
+        }
+        System.out.println(sum);
+          System.out.println(count);
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

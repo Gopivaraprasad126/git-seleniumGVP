@@ -1,0 +1,28 @@
+how can we skip a testcase conditionally?
+-----------------------------------------
+Ans: In TestNG, you can skip a test case conditionally by using the SkipException class or by managing conditions directly in your test method. 
+1. Using SkipException
+You can throw a SkipException with a custom message if a certain condition is met, and TestNG will mark the test case as "Skipped."
+
+eg:
+==
+import org.testng.SkipException;
+import org.testng.annotations.Test;
+
+public class ConditionalSkipTest {
+
+    @Test
+    public void testFeature() {
+        boolean featureEnabled = false;  // Condition to check if the feature is enabled
+        
+        if (!featureEnabled) {
+            // If the feature is disabled, skip the test case
+            throw new SkipException("Skipping this test as the feature is disabled.");
+        }
+        
+        // Rest of the test code if the feature is enabled
+        System.out.println("Executing test as the feature is enabled.");
+    }
+}
+
+In this example, if featureEnabled is false, the test will throw a SkipException and be marked as "Skipped" in the TestNG report.

@@ -1,0 +1,10 @@
+11)which type scenarios we take the linked list and Array list ?
+
+Characteristic          	      ArrayList	                      LinkedList
+Internal Structure	          Resizable array	             Doubly linked list
+Random Access	                   O(1) - Fast	                      O(n) - Slow
+Insertion/Deletion at End	   O(1) - Amortized Fast	      O(1) - Fast
+Insertion/Deletion at Beginning	   O(n) - Slow	                       O(1) - Fast
+Insertion/Deletion in Middle	   O(n) - Slow	                      O(1) - Fast (with reference)
+Memory Overhead	                      Lower	                      Higher (due to node references)
+Use Case	Frequent access by index, adding/removing elements at the end.. 	Frequent insertions/deletions anywhere in the list, especially when using an iterator

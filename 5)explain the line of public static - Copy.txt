@@ -1,0 +1,30 @@
+5)explain the line of public static void main(String[]args)?
+
+The line public static void main(String[] args) is the entry point of a Java application. Here’s a detailed breakdown of each part:
+1. public
+=========
+Access Modifier:
+The public keyword is an access modifier that makes the main method accessible from anywhere.
+Since the Java Virtual Machine (JVM) needs to call the main method to start the program, it must be public. If the method is not public, the JVM won't be able to access it, and the program won't run.
+2. static
+==========
+Static Method:
+The static keyword means that the method belongs to the class rather than to a specific instance of the class.
+The JVM can call the main method without needing to create an instance of the class. This is necessary because when the program starts, there are no objects created, so the method must be called in a static context.
+3. void
+=========
+Return Type:
+The void keyword indicates that the main method does not return any value.
+The purpose of the main method is to serve as the starting point for the program, and it does not need to return anything to the JVM.
+4. main
+========
+Method Name:
+main is the name of the method. It's a standard method name that the JVM looks for as the entry point of a Java application.
+If you change the name of this method, the JVM will not recognize it as the starting point, and your program will not run.
+5. String[] args
+================
+Parameter:
+String[] args is the parameter passed to the main method. It represents an array of String objects.
+This array is used to capture command-line arguments that are passed to the program when it is executed.
+If no command-line arguments are passed, the args array is empty (i.e., it has a length of 0).
+Example: If the program is run as java MyClass arg1 arg2, then args will contain ["arg1", "arg2"].

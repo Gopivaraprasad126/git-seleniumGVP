@@ -1,0 +1,394 @@
+//1)reverse String;
+=========================
+public class Main{
+public static void main(String[] args){
+String os = "gvg";
+String rev ="";
+for(int i=os.length()-1;i>=0;i--){
+    rev +=os.charAt(i);
+}
+System.out.println(rev);
+    if(rev.equals(os)){
+        System.out.println("string is palindrome");
+    }else{
+        System.out.println("String is not a palindrome");
+    }
+}
+}
+//2)reverse String with words;
+==================================
+public class Main{
+public static void main(String[] args){
+String os = "34 gopi vara prasad 12";
+int num = 0;
+int sum = 0;
+String[] words = os.split("\\s+");
+StringBuilder rs = new StringBuilder();
+for(int i=words.length-1;i>=0;i--){
+   String parts = words[i];
+    if(parts.matches("\\d+")){
+        num++;
+        sum +=Integer.parseInt(parts);
+        rs.append(" ").append(parts);
+    }else{
+        rs.append(parts).append(" ");
+    }
+}
+String pvp = rs.toString().trim();
+System.out.println(pvp);
+System.out.println(sum);
+System.out.println(num);
+}
+}
+//3)count numbers and sum String with words;
+===============================================
+public class Main{
+public static void main(String[] args){
+String os = "34 gopi vara prasad 12";
+int num = 0;
+int sum = 0;
+String[] words = os.split("\\s+");
+for(String part:words){
+    if(part.matches("\\d+")){
+    num++;
+    sum +=Integer.parseInt(part);
+}
+}
+System.out.println(num);
+System.out.println(sum);
+}   
+}
+//4)count of WhiteSpaces and Special Characters in String remove also;
+=========================================================================
+public class Main{
+public static void main(String[] args){
+String os = "34 @#$%^gopi vara prasad 12";
+int whiteSpa = 0;
+int spechar = 0;
+for(char c:os.toCharArray()){
+    if(Character.isWhitespace(c)){
+        whiteSpa++;
+    }else if (!Character.isLetterOrDigit(c)){
+        spechar++;
+    } 
+        
+    }
+    os = os.replaceAll("[^a-zA-Z]","");
+    
+    System.out.println(whiteSpa);
+System.out.println(spechar);
+System.out.println(os);
+}
+
+}
+    
+//5)prime numbers:
+====================
+public class Main{
+public static void main(String[] args){
+int num = 5;
+System.out.println(isprime(num));
+for(int i=100;i<1000;i++){
+    if(isprime(i)){
+        System.out.println(i+",");
+    }
+}
+}
+public static boolean isprime(int num){
+    if(num<=1){
+        return false;
+    }for(int i=2;i<=num/2;i++){
+        if(num%i==0){
+            return false;
+        } 
+    }
+    return true;
+}
+    
+}
+//6)palindrome numbers:
+========================
+public class Main{
+public static void main(String[] args){
+int num = 212;
+int onum = num;
+int rev =0;
+int rem=0;
+while(num !=0 ){
+    rem = num%10;
+    rev = rev*10+rem;
+    num = num/10;
+}
+System.out.println(rev);
+if(rev==onum){
+    System.out.println("is palim");
+}else{
+    System.out.println("its not a palim");
+
+}
+
+}
+    
+}
+//7)Fibonacci series
+========================
+public class Main
+{
+	public static void main(String[] args) {
+		int num =5;
+		int fterm = 0;
+		int sterm = 1;
+		for(int i=0;i<=num;i++){
+		    int nterm = fterm+sterm;
+		    fterm=sterm;
+		    sterm=nterm;
+		    System.out.println(nterm);
+		}
+	}
+}
+//8)Factorial of numbers
+============================
+public class Main
+{
+	public static void main(String[] args) {
+		int num =5;
+		int res=1;
+		for(int i=1;i<=num;i++){
+		    res *=i;
+		}
+		System.out.println(res);
+	}
+}
+//9)Factorial of numbers with recursion
+============================================
+public class Main
+{
+	public static void main(String[] args) {
+		int num =5;
+		System.out.println(isfact(num));
+	}
+	public static int isfact(int num){
+	    if(num==0){
+	        return 1;
+	    }else{
+	        return num*isfact(num-1);
+	    }
+	    
+	}
+}
+//10)even or odd Number
+============================
+public class Main {
+    public static void main(String[] args) {
+        int num = 5;
+        if (isEven(num)) {
+            System.out.println(num + " is even.");
+        } else {
+            System.out.println(num + " is odd.");
+        }
+    }
+
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
+11)print duplicates and their count and print without Duplicates
+==================================================================
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "gopivaraprasad";
+        int[] charCount = new int[256];
+        Set<Character> duplicates = new HashSet<>();
+        StringBuilder uniqueStr = new StringBuilder();
+
+        // Count the occurrences of each character
+        for (char c : str.toCharArray()) {
+            charCount[c]++;
+        }
+
+        // Identify duplicates and build the unique string
+        for (char c : str.toCharArray()) {
+            if (charCount[c] > 1) {
+                duplicates.add(c);
+            } else {
+                uniqueStr.append(c);
+            }
+        }
+
+        // Print duplicate characters and their counts
+        System.out.println("Duplicate characters:");
+        for (char c : duplicates) {
+            System.out.println(c + ": " + charCount[c]);
+        }
+
+        // Print the string without duplicates
+        System.out.println("String without duplicates: " + uniqueStr.toString());
+    }
+}
+                             (or)
+public class Main{
+    public static void main(String[]args){
+         String str = "gopi varaprasad";
+         int[] charcount =new int[256];
+         for(char c :str.toCharArray()){
+             charcount[c]++;
+         }
+         for(int i=0;i<charcount.length-1;i++){
+             if(charcount[i]>1){
+                 System.out.println((char)i+":"+charcount[i]+"times");
+             }
+         }
+    }
+}
+
+//12)Bobble sort
+=================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int[] arr = {1,9,3,4,5,2,8};
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+            }
+}
+
+                (or)
+
+//13)Bobble sort
+===================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int[] arr = {1,9,3,4,5,2,8};
+        int len = arr.length;
+        for(int i=0;i<len-1;i++){
+            for(int j=0;j<len-1-i;j++){
+                if(arr[j+1]<arr[j]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+        for(int num:arr){
+            System.out.print(num+",");
+        }
+        System.out.println(arr[len-1]);
+        System.out.println(arr[0]);
+            }
+}
+
+14)//In Array calculate the numbers only 
+==============================================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+       String[] arr = {"g","o","p","i","@","3","1","7"};
+       int sum =0;
+       for(String s:arr){
+           try {
+                int num = Integer.parseInt(s);
+                sum += num;
+            } catch(NumberFormatException e) {
+                
+            }
+}
+System.out.println(sum);
+}
+}
+//15)common elements in the 2 arrays 
+=======================================
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+       int[] arr1 = {1,3,4,6,8,9};
+       int[] arr2 = {2,3,4,6,1,3};
+       for(int i=0;i<arr1.length-1;i++){
+           for(int j=0;j<arr2.length-1;j++){
+               if(arr1[i]==arr2[j]){
+                   System.out.println(arr1[i]+",");
+               }
+           }
+       }
+
+}
+}
+//16)swap the values without using temp variable
+==================================================
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the num a: ");//30
+        int a = sc.nextInt();
+        System.out.println("Enter the num b: ");//10
+        int b = sc.nextInt();
+        System.out.println("before the a="+a +"b="+b);
+        a = a+b;
+        b = a-b;
+        a = a-b;
+         System.out.println("After the a="+a +"b="+b);
+    }
+}
+17)Reverse String words & number count,sum Check
+==================================================
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc = new Scanner(System.in);
+	System.out.println("take the String");
+	String str = sc.nextLine();
+	int num=0;
+	int sum=0;
+	String[] words = str.split("\\s+");
+	StringBuilder rs = new StringBuilder();
+	for(int i=words.length-1;i>=0;i--){
+	    String parts = words[i];
+	    if(parts.matches("\\d+")){
+	        num++;
+	        sum +=Integer.parseInt(parts);
+	        rs.append(parts).append(" ");
+	    }else{
+	        rs.append(parts).append(" ");
+	    }
+	}
+	String gvp = rs.toString().trim();
+	System.out.println(gvp);
+	System.out.println(sum);
+	System.out.println(num);
+	}
+}
+//18)String vowels and count of the vowels 
+=============================================
+
+ --
+//19)sum of the numbers in string :
+====================================
+public class CountAndSumDigits {
+    public static void main(String[] args) {
+        String input = "gopivaraprasad1234";
+        int count = 0;
+        int sum = 0;
+
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            if (Character.isDigit(ch)) {
+                count++;
+                sum += Character.getNumericValue(ch);
+            }
+        }
+
+        System.out.println("Number of digits: " + count);
+        System.out.println("Sum of digits: " + sum);
+    }
+}
+
+
+    
+
+
+

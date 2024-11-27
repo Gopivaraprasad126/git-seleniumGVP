@@ -1,0 +1,93 @@
+Class1Api Testing:
+==================
+API testing introduction
+-------------------------
+
+Postman,RestAssurance  
+
+->client =computer(where we are trying to access the application)
+->Server =(where we are actually installed the application is called Server)
+
+request (url)
+response
+
+Client/Server Architecture
+-------------------------
+1)1-tier Architecture(client computer,fileserver)
+2)2-tier Architecture(client tier,Database)
+3)3-tier Architecture(Client tier,Business logic layer ,databaselaye
+
+3 types of layers
+------------------
+1)presntation layer
+2)Application layer(Business layer)
+3)Data layer
+
+what is an API(Appliction Prgrammig interface)
+----------------------------------------------
+
+Types of Apis
+-------------
+SOAP(Simple Object Access Protocal)
+REST(Representational State transfer) 
+ 
+
+***
+What is WebService:
+-------------------
+when you keep Api into internet we called as the Webservices
+
+->All web services are API's only
+           (but)
+->All API's are not webservices 
+
+RESTAPIHTTPMETHODS
+==================
+
+Request Message---->Appliction Progarm Interface(API)---->Response Message
+(HTTP REQUEST)                                           (Validation Performed)
+(get,post,put,patch,delete)                           (Response Status code ,data etc)
+
+
+
+
+URI: Uniform Resource Identifier
+URL: UNIEORM RESOURCE LOCATOR
+URN: UNIFORM RESOURCE NAME
+
+
+HTTPS://GOOGLE.COM/ARTICLES/ARTICLENAME
+scheme  host       path
+ 
+
+Featur&Resorce:
+================
+Feaure is used inmanual testing to test some functionality and similarly resource 
+ is the term used in API Automation testing reffering some Functionality
+
+PAYLOAD:
+========
+->Request Payload:the data what we are sending in the request 
+->Response Payload:
+
+
+End points(Locations) :
+===========
+path of the our information those are not changing (if in case server and host are changed but the end points will not changed)
+
+ 
+->the only Get request is possible by the user 
+all commands lke post,put,delete only possible by the ApI only(Postman)
+
+
+ 
+
+
+
+
+
+
+
+
+
+

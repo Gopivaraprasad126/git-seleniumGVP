@@ -1,0 +1,60 @@
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        // Set up ChromeDriver
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://google.com");
+
+        // Path to the Excel file
+        String path = "path/to/excelfile.xlsx";
+
+        try {
+            // Load the Excel file
+            FileInputStream fis = new FileInputStream(path);
+            Workbook wb = new XSSFWorkbook(fis); // Use XSSFWorkbook for .xlsx files
+
+            // Get the first sheet
+            Sheet sheet = wb.getSheetAt(0);
+
+            // Loop through all rows in the sheet
+            for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+                Row row = sheet.getRow(i);
+                
+                // Get username and password from the Excel file
+                String username = row.getCell(0).getStringCellValue();
+                String password = row.getCell(1).getStringCellValue();
+
+                // Find the username and password fields on the web page
+                WebElement ufield = driver.findElement(By.id("uid"));
+                WebElement pfield = driver.findElement(By.id("pid"));
+
+                // Enter the values from Excel
+                ufield.sendKeys(username);
+                pfield.sendKeys(password);
+
+                // Click the login button
+                WebElement button = driver.findElement(By.id("bid"));
+                button.click();
+            }
+
+            // Close the workbook and file input stream
+            wb.close();
+            fis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
+    }
+}

@@ -1,0 +1,24 @@
+frequently Asked java questions:-
+===============================
+
+1)Explain about OOPS concept and where u see in your project 
+2)Tell me about Collections especially in collection
+a)linked list b)arraylist c)Map d)hashSet e)hash map 
+3)what are the exceptions in Java how to handle the exceptions in java
+4)Differnce between the final,finalize and finally kewords
+5)explain the line of public static void main(String[]args)?
+6)what are the Access modifiers in java
+7)explain this ,final,super keywords in java
+8)Can you create a instance for the Abstract class
+9)Is the 100% Abstraction is possible in java?
+10)WHat is the String ,and StringBuilder and StringBuffer which one is thread safty and faster?
+11)which type scenarios we take the linked list and Array list ?
+12)Tell me about the Constructors in java why we create the constructor in class
+13)what is the stack memory and heap memory 
+14)can you create a two main methods in java
+15)what is the .equals and (==) methods in java
+16)difference between the @findBy and @FindBys in pom 
+17)Can you override the private and Static methods 
+18)The finally block is always execute in java?
+19)what is the object class in java and what are those methods
+20)what is the singleton method in java?

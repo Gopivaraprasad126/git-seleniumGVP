@@ -1,0 +1,59 @@
+What is a Static Variable?
+
+A static variable in programming is a variable that belongs to the class rather than instances of the class. It is shared across all instances of that class, meaning that all objects of the class will have access to the same value of the static variable.
+
+In most programming languages like Java, C++, and Python, the static keyword is used to declare static variables.
+
+Key Features:
+============
+Class-Level Variable: 
+---------------------
+Static variables are associated with the class itself, not individual objects.
+Shared Among Instances:
+----------------------- 
+All instances (objects) of the class share the same static variable. If one instance modifies the value, the change will be reflected across all instances.
+Memory Allocation:
+------------------ 
+Static variables are stored in a specific memory area (usually the method area or data segment), and they are allocated memory only once when the class is loaded.
+Access Without Object:
+----------------------
+ Static variables can be accessed without creating an object of the class, directly via the class name.
+
+example program:
+-----------------
+class Employee {
+    // Static variable
+    static String companyName = "ABC Corp";
+    
+    // Instance variable
+    String employeeName;
+
+    Employee(String name) {
+        this.employeeName = name;
+    }
+
+    void display() {
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Company Name: " + companyName);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp1 = new Employee("John");
+        Employee emp2 = new Employee("Jane");
+        
+        emp1.display(); // Outputs ABC Corp as company name
+        emp2.display(); // Outputs ABC Corp as company name
+        
+        // Modifying static variable
+        Employee.companyName = "XYZ Corp";
+        
+        emp1.display(); // Now shows XYZ Corp
+        emp2.display(); // Also shows XYZ Corp
+    }
+}
+
+Shared Data: Useful when data needs to be shared across all instances of a class.
+Memory Efficiency: Only one copy of the static variable is maintained, conserving memory.
+Global Access: Static variables can be accessed globally across the program

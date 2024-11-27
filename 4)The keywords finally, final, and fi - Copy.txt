@@ -1,0 +1,84 @@
+The keywords finally, final, and finalize in Java have distinct purposes and are used in different contexts. Here’s a breakdown of each:
+
+1. final Keyword:
+================
+The final keyword is used to apply restrictions on classes, methods, and variables.
+
+Final Variable:
+
+A final variable is a constant. Once a final variable is assigned a value, it cannot be modified.
+Example:
+java
+Copy code
+final int MAX_VALUE = 100;
+// MAX_VALUE = 200; // This would cause a compilation error
+Final Method:
+
+A final method cannot be overridden by subclasses. It ensures that the implementation of the method remains unchanged.
+Example:
+java
+Copy code
+public class Parent {
+    public final void display() {
+        System.out.println("This is a final method.");
+    }
+}
+
+public class Child extends Parent {
+    // public void display() { } // This would cause a compilation error
+}
+Final Class:
+
+A final class cannot be subclassed. No class can inherit from a class marked as final.
+Example:
+java
+Copy code
+public final class FinalClass {
+    // Class content
+}
+
+// public class SubClass extends FinalClass { } // This would cause a compilation error
+
+2. finally Block
+==================
+The finally block is used in conjunction with try and catch blocks. It provides a mechanism to execute code after a try block, regardless of whether an exception was thrown or not.
+
+Purpose:
+
+The finally block is typically used for cleanup activities, like closing files, releasing resources, etc.
+Example:
+java
+Copy code
+try {
+    // Code that might throw an exception
+} catch (Exception e) {
+    // Handle exception
+} finally {
+    // Code that will always execute, even if an exception occurs
+    System.out.println("This is the finally block.");
+}
+Execution:
+
+The finally block is executed even if a return statement is encountered in the try or catch blocks. However, if the JVM exits or the thread running the try block is interrupted, the finally block may not execute.
+
+3. finalize Method:
+===================
+The finalize method is associated with garbage collection. It is a method that the garbage collector calls before destroying an object to allow it to perform cleanup operations.
+
+Purpose:
+
+The finalize method is intended to give an object a chance to clean up resources (like closing files or releasing memory) before it is garbage collected.
+Example:
+java
+Copy code
+protected void finalize() throws Throwable {
+    try {
+        // Cleanup code
+        System.out.println("Finalize method called");
+    } finally {
+        super.finalize();
+    }
+}
+Note:
+
+The finalize method is rarely used and is generally considered deprecated in modern Java development because it does not guarantee timely execution or execution at all. Other methods, such as try-with-resources or manual cleanup, are preferred for resource management.

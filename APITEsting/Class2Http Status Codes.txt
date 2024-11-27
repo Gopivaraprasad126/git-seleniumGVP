@@ -1,0 +1,77 @@
+Http Status Codes:
+==================
+level 200
+---------
+200:OK
+201:Created
+202:Accepted
+203:Non-Authorative information
+204: No Content
+
+Level 400
+---------
+400:Bad Request
+401:UnAuthorized
+403:Forbidden
+404:NotFound
+409:Conflict
+
+level 500
+----------
+500:Internal Server Error
+501:Not Implemented
+502:Bad GateWay
+503:Service Unavailable
+504:Gateway TimeOut
+599:Network TimeOut
+
+
+WorkSpace: Area where we maintain files and Saved.
+==========
+
+workspace:create,rename,delete
+
+collection(folder): contains number of folders and Http Request
+===================
+create,rename,delete,run the collection
+
+We Can Create any number of Collections Under WorkSpace
+
+Collections having the Http request and u want to duplicate this all collection 
+by clicking the three dot buttons and it has the duplicate button...
+
+http requests
+==============
+Get----Retrieve the resource from database
+post---Create resources on database
+put----Updating existing resource on Database
+patch---Update partial resources of update
+Delete-delete existing resource from database 
+
+what is the cookies
+===================
+T he temporarly file created by the browser it is called as the 
+cookie and it consist the Data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

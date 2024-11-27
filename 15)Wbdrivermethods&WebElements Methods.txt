@@ -1,0 +1,69 @@
+1)Wbdriver methods
+==================
+get(String url)	:Opens the specified URL in the browser.
+
+getTitle():Returns the title of the current page.
+
+getCurrentUrl():Returns the current URL loaded in the browser.
+
+getPageSource():Returns the source code of the current page.
+
+quit()	Closes all browser windows and ends the WebDriver session.
+
+close()	Closes the current browser window.
+
+manage().window().maximize()	Maximizes the browser window.
+
+manage().window().fullscreen()	Makes the browser window full screen.
+
+navigate().to(String url)	Navigates to a specific URL (similar to get() method).
+
+navigate().back()	Navigates back in the browser's history.
+
+navigate().forward()	Navigates forward in the browser's history.
+
+navigate().refresh()	Refreshes the current page.
+
+manage().timeouts().implicitlyWait()	Sets an implicit wait for locating elements on the page.
+
+switchTo().alert()	Switches to an alert box.
+
+switchTo().frame(int index)	Switches to a specific frame by index.
+
+switchTo().window(String name)	Switches control to a window with the specified name/handle.
+
+2)WebElements
+=============
+click()	Clicks on the element (e.g., button, link).
+
+sendKeys(CharSequence... keysToSend)	Sends keystrokes to the element (e.g., typing text into an input field).
+
+clear()	Clears the content of a text input field.
+
+getText()	Retrieves the visible text of the element.
+
+getTagName()	Returns the tag name of the element (e.g., input, div).
+
+getAttribute(String name)	Retrieves the value of a specific attribute (e.g., href, class).
+
+getCssValue(String propertyName)	Retrieves the value of a specific CSS property of the element.
+
+isDisplayed()	Checks whether the element is displayed on the page.
+
+isEnabled()	Checks whether the element is enabled (can be interacted with).
+
+isSelected()	Checks whether the element (usually a checkbox or radio button) is selected.
+
+submit()	Submits a form.
+
+findElement(By locator)	Finds a child element within the current element using a locator.
+
+findElements(By locator)	Finds all child elements within the current element matching the locator.
+
+getSize()	Returns the size (width and height) of the element.
+
+getLocation()	Returns the location (x, y coordinates) of the element on the page.
+
+getRect()	Retrieves the dimensions and position of the element as a rectangle.
+
+getScreenshotAs(OutputType target)	Captures the screenshot of the element.

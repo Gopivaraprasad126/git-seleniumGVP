@@ -1,0 +1,85 @@
+A test plan is a comprehensive document that outlines the strategy, approach, resources, and schedule for testing activities. It also includes details on the scope, objectives, and deliverables of the testing process. Key artifacts involved in a test plan typically include:
+
+Test Plan Document:
+
+Objective: Describe the purpose and goals of the testing effort.
+---------
+
+Scope: Defines what is in scope and out of scope for testing.
+------
+
+Test Items: Lists the components or features that will be tested.
+-----------
+
+Features to be Tested: Specifies which features or functionalities will be tested.
+======================
+
+Features Not to be Tested: Identifies any features that will be excluded from testing.
+==========================
+
+Test Approach/Strategy: 
+------------------------
+Outlines the overall strategy for testing, including test levels (e.g., unit, integration, system, acceptance), test types (e.g., functional, non-functional), and test design techniques.
+
+Test Deliverables:
+------------------
+ Lists all the documents and artifacts that will be produced during the testing process (e.g., test cases, test scripts, test data, test results).
+
+Pass/Fail Criteria:
+-------------------
+ Defines the criteria for determining whether a test has passed or failed.
+
+Test Environment: 
+-----------------
+Describes the environment in which testing will be conducted, including hardware, software, network configurations, and any other dependencies.
+
+Test Schedule:
+---------------
+ Provides a timeline for testing activities, including milestones and deadlines
+.
+Resources: 
+----------
+Lists the human resources (e.g., test team members) and other resources (e.g., tools, test environments) required for testing.
+
+Risks and Contingencies:
+------------------------
+ Identifies potential risks that could impact testing and the mitigation strategies for those risks.
+
+Responsibilities: 
+------------------
+Outlines the roles and responsibilities of the test team and other stakeholders.
+
+Test Cases:
+-----------
+Detailed descriptions of individual test scenarios, including inputs, expected results, and execution conditions.
+
+Test Scripts:
+-------------
+Automated or manual scripts used to execute test cases.
+
+Test Data:
+----------
+Data sets used during testing to validate the functionality of the application.
+
+Traceability Matrix:
+--------------------
+A document that maps test cases to requirements, ensuring that all requirements are covered by tests.
+
+Defect/Issue Log:
+-----------------
+A log of defects or issues identified during testing, including their status, severity, and resolution.
+
+Test Summary Report:
+--------------------
+A summary of the testing activities, including the number of test cases executed, passed, failed, and any key findings.
+
+Test Execution Report:
+-------------------------
+Detailed report of the results of executing the test cases, including any deviations from expected results.
+These artifacts help ensure a structured and thorough testing process, providing clear documentation and traceability throughout the software development lifecycle.
+
+
+
+
+
+

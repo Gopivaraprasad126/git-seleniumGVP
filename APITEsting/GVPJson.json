@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "name": "Gopivaraprasad",
+      "age": 30,
+      "position": "Software Engineer",
+      "department": "Development"
+    },
+    {
+      "name": "Sudheer",
+      "age": 29,
+      "position": "QA Engineer",
+      "department": "Testing"
+    },
+    {
+      "name": "Bhrath",
+      "age": 27,
+      "position": "Project Manager",
+      "department": "Management"
+    }
+  ],
+  "company": {
+    "name": "Tech Solutions Ltd.",
+    "location": "New York",
+    "founded": 2010,
+    "ceo": "Alice Johnson"
+  }
+}

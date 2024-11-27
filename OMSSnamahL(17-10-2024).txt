@@ -1,0 +1,105 @@
+OMSSnamahL(17-10-2024):
+-----------------------
+//1)two Strings Anagrams or not 
+================================
+class HelloWorld {
+    public static void main(String[] args) {
+    String s1 = "listen";
+    String s2 = "silevv";
+    System.out.println(anagram(s1,s2));
+    }
+    public static boolean anagram(String s1,String s2){
+        if(s1.length()!=s2.length()){
+            return false;
+        }
+        int[] ccount = new int[256];//Aschii values
+        for(int i=0;i<s1.length();i++){
+            ccount[s1.charAt(i)]++;
+            ccount[s2.charAt(i)]--;
+        }
+        for(int num:ccount){
+            if(num !=0){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+}
+
+
+
+page object mechanism
+----------------------
+
+locaters we are strored in pom  
+
+->.Jenkins pipeline
+
+TestNg                                      Cucumber
+->.xml                                         >.feature
+->
+
+1)how do you handle data parameterization Globally
+in test ng we are using the 
+<parameterization name="UrL" value ="http://gvpEnterprizes.com/>
+            
+in  cucumber we mention in the future file and put to where u need test step provide thre
+
+2) How do you handle the parameterization particular TestCase
+
+
+@Dataprovider 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

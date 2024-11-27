@@ -1,0 +1,65 @@
+13)what is the manage() how many methods it has
+------------------------------------------------ 
+
+In Selenium WebDriver, the manage() method is part of the WebDriver interface, which provides access to various management operations related to the browser session. The manage() method returns a WebDriver.Options instance, which has several methods for managing browser settings and state.
+
+Here’s a summary of the key methods available through the manage() method in Selenium WebDriver:
+
+1. timeouts()
+--------------
+Purpose: Provides access to methods for setting timeouts related to finding elements, script execution, and page loading.
+
+Methods:
+implicitlyWait(long time, TimeUnit unit): Sets the default waiting time when searching for elements.
+pageLoadTimeout(long time, TimeUnit unit): Sets the maximum time to wait for a page to load.
+setScriptTimeout(long time, TimeUnit unit): Sets the timeout for asynchronous script execution.
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+2. window()
+-------------
+Purpose: Provides methods for managing browser windows and their properties.
+
+Methods:
+maximize(): Maximizes the current window.
+minimize(): Minimizes the current window.
+fullscreen(): Makes the current window fullscreen.
+driver.manage().window().maximize();
+
+3. cookies()
+------------
+Purpose: Provides methods for managing browser cookies.
+
+Methods:
+addCookie(Cookie cookie): Adds a new cookie to the browser.
+deleteCookieNamed(String name): Deletes a specific cookie by name.
+deleteAllCookies(): Deletes all cookies in the browser.
+getCookieNamed(String name): Retrieves a cookie by its name.
+getCookies(): Retrieves all cookies for the current domain.
+driver.manage().addCookie(new Cookie("key", "value"));
+
+4. logs()
+---------
+Purpose: Provides methods to access browser logs.
+
+Methods:
+
+get(String logType): Retrieves logs of a specific type (e.g., driver, browser, client).
+LogEntries logs = driver.manage().logs().get("browser");
+5. window().setSize(Dimension dimension)
+---------------------------------------
+Purpose: Sets the size of the current window.
+
+Methods:
+setSize(Dimension dimension): Sets the size of the window to the specified width and height.
+driver.manage().window().setSize(new Dimension(1024, 768));
+Summary of manage() Methods:
+timeouts()
+window()
+cookies()
+logs()
+
+Each of these methods provides a set of functionality that allows you to manage different aspects of the browser session, such as timeouts, window size, cookies, and logs. These management operations are crucial for controlling the browser environment and ensuring your automation scripts run smoothly and reliably.
+
+
+
+

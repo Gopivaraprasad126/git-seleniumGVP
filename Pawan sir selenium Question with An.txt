@@ -1,0 +1,39 @@
+selenium pawan sir Question with Answer
+========================================
+
+1)what is the super interface of webdriver?
+a:Search Context
+
+2)What are the loads available in selenium Webdriver?
+a):
+imlicitlyWait
+ExplicitlyWait
+FluentWait
+pageLoadTimeout
+Tread.sleep()-static wait
+
+3)how to clear the text in the textbox?
+a:Clear()
+
+4)list some scenarios which we are cannot automate using SW?
+a:Automating Captcha
+  barcode
+  Windows OS based pop ups
+  Third party and calender elements 
+  Image /word
+   pdf 
+
+5)wow can you use the Recovery cenario in selniumWebdriver
+a:By using of "TryCatchBlock"
+
+6)how to Schedule the testSuite execution?
+a:by using Jenkins and Bamboo
+
+7)how to send an email stating the execution status to all stakeholders in Selenium?
+a:we can send mail in java using javax.mail library
+
+8)What is the desired capabilities?
+a:Capabilities are used to set the values of the browser attributes
+before we launch any browser using selenium Webdriver
+
+9)

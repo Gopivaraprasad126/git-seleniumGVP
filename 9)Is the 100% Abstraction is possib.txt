@@ -1,0 +1,74 @@
+9)Is the 100% Abstraction is possible in java?
+
+Yes, 100% abstraction is possible in Java, but only by using interfaces.
+
+Understanding Abstraction:
+Abstraction in Java is the process of hiding the implementation details and showing only the essential features of an object or system.
+100% Abstraction means that there are no concrete (implemented) methods in the abstraction; all methods are abstract, meaning they have no implementation in the defining class or interface.
+Achieving 100% Abstraction:
+Using Interfaces:
+
+An interface in Java can provide 100% abstraction because all the methods declared in an interface are abstract by default (before Java 8). An interface cannot have method implementations (with exceptions introduced in Java 8 and later, which will be discussed below).
+Example:
+java
+Copy code
+interface Animal {
+    void makeSound(); // Abstract method
+    void sleep();     // Abstract method
+}
+In the above interface, Animal, all methods are abstract, and there is no implementation. Any class that implements the Animal interface must provide implementations for these methods.
+Abstract Classes:
+
+An abstract class can have both abstract and concrete methods, so it doesn’t necessarily provide 100% abstraction.
+However, if you design an abstract class with only abstract methods, it would theoretically provide 100% abstraction, but this is not typically the use case for abstract classes.
+Interfaces and 100% Abstraction:
+Before Java 8:
+
+All methods in an interface were abstract by default. An interface could not contain any method implementations, so it provided 100% abstraction.
+From Java 8 Onwards:
+
+Java 8 introduced default methods and static methods in interfaces, which allowed interfaces to have method implementations.
+Despite this, you can still achieve 100% abstraction by not using these features and only declaring abstract methods in your interface.
+Example with Java 8 and later:
+java
+Copy code
+interface Animal {
+    void makeSound(); // Abstract method
+    void sleep();     // Abstract method
+    // No default or static methods
+}
+Achieving 100% Abstraction in Practice:
+When a class implements an interface, it must provide concrete implementations for all abstract methods declared in the interface.
+Example:
+java
+Copy code
+interface Animal {
+    void makeSound();
+    void sleep();
+}
+
+class Dog implements Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Bark");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Sleeping...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.makeSound(); // Outputs: Bark
+        myDog.sleep();     // Outputs: Sleeping...
+    }
+}
+In this example, the Animal interface provides 100% abstraction because it contains no implemented methods. The Dog class provides the implementations for these methods.
+
+Summary:
+100% abstraction is possible in Java using interfaces.
+Interfaces allow you to define a contract with no implementation details, requiring any implementing class to provide the method implementations.
+Abstract classes, while capable of providing abstraction, do not necessarily achieve 100% abstraction because they can contain implemented methods.

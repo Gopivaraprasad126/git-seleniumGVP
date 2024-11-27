@@ -1,0 +1,47 @@
+1)Explain about OOPS concept and where u see in your project :
+=================================================================
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects," which can encapsulate data and behavior. OOP principles help in designing systems that are modular, reusable, and maintainable. The core concepts of OOP are:
+
+Encapsulation: This involves bundling data (attributes) and methods (functions) that operate on the data into a single unit, or class. Encapsulation helps to protect the internal state of the object from unintended interference and misuse.
+
+Inheritance: This allows one class (child class) to inherit the attributes and methods of another class (parent class). It promotes code reusability and establishes a hierarchical relationship between classes.
+
+Polymorphism: This refers to the ability to present the same interface for different underlying data types. In practice, this can be achieved through method overriding (inheritance) or method overloading (same method name with different parameters).
+
+Abstraction: This is the concept of hiding complex implementation details and showing only the necessary features of an object. It helps in reducing complexity and allows a focus on interactions rather than implementation.
+
+Applying OOP Concepts in Your Project
+Given that you are using Cucumber, Page Object Model (POM), and TestNG in your healthcare domain project, here's how OOP principles can be applied:
+
+Encapsulation in Page Object Model (POM):
+
+POM is a design pattern that uses encapsulation to create an object-oriented representation of the web pages in your application. Each page of the application is represented by a class, and the elements on the page are encapsulated within that class.
+For example, in a healthcare application, you might have a LoginPage class that encapsulates all the methods and elements related to the login functionality (e.g., username field, password field, login button).
+Inheritance in POM:
+
+Inheritance can be used to create a base page class that contains common methods and properties shared across different page objects. For instance, a BasePage class could include common actions like click() or sendKeys(), which are inherited by specific page classes such as LoginPage, DashboardPage, etc.
+This reduces code duplication and promotes code reusability.
+Polymorphism in Step Definitions:
+
+Polymorphism can be applied in the step definitions of your Cucumber tests. You might have methods with the same name but different implementations depending on the context or scenario.
+For example, a step definition submitForm() could be used in various scenarios to handle different forms (e.g., patient registration form, appointment form) by having different implementations based on the form type.
+Abstraction in TestNG:
+
+Abstraction can be utilized in TestNG by creating abstract test classes that define common test configurations and behaviors. Specific test classes can then extend these abstract classes to include detailed test cases.
+For instance, an abstract class HealthcareTestBase might set up the environment, initialize WebDriver, and provide common test utilities. Test classes like PatientTest or AppointmentTest can extend this base class and provide specific test logic.
+Example in Healthcare Domain
+Suppose you are working on a healthcare application where users can log in, view their profiles, and schedule appointments. Here’s how OOP concepts apply:
+
+Encapsulation: Create a LoginPage class with methods like enterUsername(), enterPassword(), and clickLoginButton(). This encapsulates all login-related operations.
+
+Inheritance: Develop a BasePage class with common methods like waitForElement() and clickElement(). The LoginPage and ProfilePage classes inherit from BasePage, reusing these common methods.
+
+Polymorphism: Implement a submitForm() method that handles different forms (e.g., PatientRegistrationForm, AppointmentForm) based on the context. Each form can have its own implementation for submitting.
+
+Abstraction: Use an abstract class HealthcareTestBase to set up WebDriver and common test configurations. Specific test classes like PatientLoginTest or AppointmentSchedulingTest extend this class and implement specific test scenarios.
+
+By leveraging OOP principles, your project will benefit from increased maintainability, readability, and scalability, making it easier to manage and extend as the application grows.
+
+
+
+

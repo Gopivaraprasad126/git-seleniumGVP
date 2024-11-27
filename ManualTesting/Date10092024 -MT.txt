@@ -1,0 +1,96 @@
+Date:10/09/2024 -MT
+1)Testing Concepts
+2)Testing Project
+3)Agile Methodology
+
+Manual Testing:
+===============
+Software:
+---------
+A software is a collection of computer programs that helps us to perform a task
+
+Types of Software:
+-------------------
+1)System Software
+ex:operating Systems,Server,Utilities
+2)Programming Software
+ex:compilers,debuggers,interpreters
+3)Application Softwares
+ex:WebApplication,Mobile Application ,Desktop Application
+
+Software Testing:
+=================
+Software Testing is an Activity to detect and identify the defects in the software
+
+
+Software Quality
+----------------
+->Bug free
+->Deliverd on Time
+->With in budget
+->Meets requirements and Expectations
+->maintainable
+
+What is the project and product
+--------------------------------
+->the software application is developed for Specific customer based on the requirement it is called project
+
+->The Software Application is developed for Multiple customers based on market Requriments then I is called product 
+
+Service base company:
+====================
+they worked for the particular customers(Projects)
+tcs ,Accenture,infosys
+
+Product Base Company:
+=====================
+Based on the market requirement
+(Google,microsoft,oracle,bosh)
+
+Error: Human mistakes(developer some programme ) 
+======
+
+bug:( Deviation between Expected and Acutal value is called the bug)
+====
+
+failure:the bug founded by the customer is called the failure
+========
+
+Why the Software has the bugs?
+------------------------------
+>Miscommunication or no Communication
+>Software Complexity
+>Programming Errors
+>Changing Reuirements
+>lack of skilled Testers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

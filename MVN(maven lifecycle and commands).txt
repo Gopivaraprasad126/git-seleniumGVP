@@ -1,0 +1,60 @@
+mvn clean
+Usage: Removes the target directory, which contains all the compiled files and build artifacts (such as .class files and JARs). This command essentially cleans the project, preparing it for a fresh build.
+
+2. mvn compile
+Usage: Compiles the source code of the project. This command processes the source files and produces compiled .class files in the target/classes directory.
+
+3. mvn test
+Usage: Runs the unit tests of the project. It compiles the test code and executes all the tests in the project, typically using a framework like JUnit.
+
+4. mvn package
+Usage: Packages the compiled code into a distributable format, such as a JAR or WAR file. It also runs any tests by default, unless they are skipped.
+
+5. mvn install
+Usage: Installs the package into the local Maven repository (~/.m2/repository), making it available for use as a dependency in other Maven projects.
+
+6. mvn deploy
+Usage: Deploys the package to a remote repository for sharing with other developers and projects. This command is typically used in a CI/CD pipeline to push the built artifacts to a central repository.
+
+7. mvn clean install
+Usage: Cleans the project, compiles the source code, runs the tests, packages the compiled code, and installs the package into the local Maven repository. This is a common command used to completely rebuild the project.
+
+8. mvn clean package -DskipTests
+Usage: Cleans the project, compiles the source code, and packages the compiled code, skipping the tests. The -DskipTests option tells Maven to skip running the tests during the build.
+
+
+9. mvn dependency:tree
+Usage: Prints the dependency tree for the project, showing all dependencies and their transitive dependencies. This command is useful for debugging dependency conflicts.
+
+10. mvn site
+- **Usage:** Generates a project website based on the information in the `pom.xml` file. The site typically includes project reports, documentation, and other information.
+- **Command:**
+
+11. mvn versions:display-dependency-updates
+- **Usage:** Checks for updates to the project's dependencies and displays the latest available versions. This is useful for keeping your project up-to-date with the latest library versions.
+  mvn versions:display-dependency-updates
+  ```
+12. mvn exec:java -Dexec.mainClass="com.example.Main"
+- **Usage:** Runs the main method of the specified class (`com.example.Main` in this example) directly from the command line without needing to package it first. The `exec:java` plugin is used for executing Java programs.
+  mvn exec:java -Dexec.mainClass="com.example.Main"
+  ```
+13. mvn validate
+- **Usage:** Validates the project structure and the `pom.xml` file, ensuring everything is in place before proceeding with the build lifecycle.
+
+14. mvn verify
+
+- **Usage:** Runs any integration tests to ensure that the project is valid and meets quality criteria before packaging. This phase comes after `test` and before `install`.
+- 
+15. mvn archetype:generate
+javascript
+
+- **Usage:** Generates a new Maven project from an archetype (a project template). This command is used to quickly create a new project with a predefined structure.
+  mvn archetype:generate
+  ```
+These commands cover a wide range of Maven functionalities, from basic project management to complex dependency handling and deployment tasks.
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+3)what are the exceptions in Java how to handle the exceptions in java?
+
+Checked Exceptions:
+===================
+Definition: These exceptions are checked at compile-time. The compiler forces you to handle them, either with a try-catch block or by declaring them in the method signature with throws.
+Examples: IOException, SQLException, ClassNotFoundException.
+Usage: Used for exceptional conditions that a program should anticipate and recover from, such as file handling or database connectivity issues.
+Unchecked Exceptions:
+=======================
+Definition: These exceptions are not checked at compile-time but at runtime. The compiler does not force you to handle them.
+Examples: NullPointerException, ArrayIndexOutOfBoundsException, ArithmeticException.
+Usage: Typically occur due to programming errors or logic flaws, such as accessing an array out of bounds or performing illegal arithmetic operations.
+
+4)Differnce between the final,finalize and finally kewords
+
+final:-
+=====
+Purpose: The final keyword is used to define constants, prevent method overriding, and inheritance.
+Usage:
+Variables: When a variable is declared as final, its value cannot be changed once it is assigned. This is often used to define constants.
+
+it will proceed immediately; otherwise, it will wait for the entire time.
+
+finalize:
+===========
+Purpose: The finalize method is a method in the Object class that is called by the garbage collector before an object is destroyed. It provides an opportunity to perform cleanup operations.
+Usage:
+Definition: You override the finalize method in your class to release resources or perform cleanup operations.
+
+Important Note: The use of finalize is generally discouraged in modern Java programming because it can lead to performance issues and unpredictable behavior. The try-with-resources statement and the AutoCloseable interface are preferred for resource management.
+
+finally:
+========
+Purpose: The finally block is used in exception handling to ensure that a block of code is executed regardless of whether an exception is thrown or not. It is typically used for closing resources or performing cleanup.
+Usage:
+Definition: The finally block follows try and catch blocks and is executed after the try and catch blocks, no matter what (even if an exception is thrown).

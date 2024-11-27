@@ -1,0 +1,77 @@
+Here are some common attributes found in a test case template:
+===============================================================
+1)Test Case ID:
+-------------
+A unique identifier for the test case (e.g., TC001).
+
+2)Test Case Title/Name:
+-----------------------
+A brief and descriptive title for the test case (e.g., "Login with valid credentials").
+
+3)Test Case Description:
+------------------------
+A detailed explanation of what the test case is designed to validate.
+
+4)Preconditions/Prerequisites:
+-------------------------------
+Any conditions that must be met before executing the test case (e.g., "User must be registered and have an active account").
+
+5)Test Data:
+------------
+Specific data required for the test (e.g., username and password).
+
+6)Steps to Execute:
+-------------------
+A step-by-step list of actions to perform during the test.
+
+7)Expected Result:
+-------------------
+The anticipated outcome after executing the test steps.
+
+8)Actual Result:
+--------------
+The observed outcome after the test execution (filled in after the test is run).
+
+9Test Status/Result:
+-------------------
+Indicates whether the test passed, failed, or is blocked (e.g., "Pass", "Fail", "Blocked").
+
+10)Priority:
+-------------
+The importance level of the test case (e.g., "High", "Medium", "Low").
+
+11)Severity:
+---------
+The impact level if the test case fails (e.g., "Critical", "Major", "Minor").
+
+12)Test Environment:
+--------------------
+Details about the environment where the test is executed (e.g., OS, browser version, database version).
+
+13)Test Case Author/Owner:
+-----------------------
+The name of the person who created the test case.
+
+14)Execution Date:
+------------------
+The date when the test case was executed.
+
+15)Executed By:
+-----------------
+The name of the person who executed the test case.
+
+16)Attachments:
+-------------
+Links to any supporting documents, screenshots, or logs.
+
+17Comments/Notes:
+---------------
+Any additional observations or comments related to the test case.
+These attributes help ensure that test cases are comprehensive, repeatable, and easy to understand, facilitating effective testing and defect tracking.
+
+
+
+
+
+
+

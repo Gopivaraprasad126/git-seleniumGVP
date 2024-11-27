@@ -1,0 +1,12 @@
+Most asked interview questions in Cucumber?
+============================================
+1)What is the cucumber framework and why its popular ? what are the advantages of the cucumber framework?
+2)Expalin the Structure of cucumber framework and what are the major components of the cucmber?
+3)What is the difference between the background keyword and Hooks in the cucumber framework?
+4)write steps for one testObjective like(LoginPage) from feature file to Logic of stepdefination class
+5)what is the webtables in the cucumber framework?
+6)d/w between the scenario and Scenario Outline
+7)what is the  difference b/w the Webtabels and scenario outline?
+8)explain about all the cucumber-options
+9)what type reports can support the cucumber?
+10)can we run the cucmber framework with Test-ng

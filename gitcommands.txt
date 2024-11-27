@@ -1,0 +1,39 @@
+omssnamahl(18-11-2024) 
+
+GIT & GITHUB
+------------
+
+ pre-requisites
+------------------
+
+Step1: Create new Account in GitHub(signup)
+url:https://github.com/
+
+Create a new repository in GitHub
+       GitHub url: https://"url of new repository"
+
+Step2: Download &Install the git-repository(local)
+
+Commands
+--------
+git init -(new local repository(empty gitrepo))
+git remote add Origin(GitHub url: https://"url of new repository")
+
+
+status git-status
+git add -A(all)
+
+BEFORE DOING COMMIT WE HAVE TO DO TWO THINGS 
+---------------------------------------------
+git config --global user.name "pavan"
+
+git config --global user.email "gopivaraprasadch262@gmil.com"
+
+git commit -m"write some comment"   --->commit all the files in to local git repository
+
+git push -u origin master --> send all the files from git to GitHub repository
+
+git pull - origin master
+
+
+ 

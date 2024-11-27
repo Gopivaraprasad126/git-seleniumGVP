@@ -1,0 +1,9 @@
+Frequently Asked Test-Ng Questions:-
+====================================
+1)What is TestNg and Tell the different types of the methods in test-Ng?
+2)What are the assertions and Annotations in the Test_Ng?
+*3)how to done the parallal testing in the Test_Ng?
+4)how to run the Failed Testcases in Test-Ng ?
+5)what are the eventListeners in Test-ng
+6)how to done the parametarization in Test-ng
+7)what is the usage of dataprovider and expalian briefly about it?

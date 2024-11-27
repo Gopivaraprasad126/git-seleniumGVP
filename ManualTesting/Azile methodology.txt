@@ -1,0 +1,76 @@
+Azile methodology: 
+==================
+Iterative and Incremental
+
+> Modules (feature) keep adding in this process
+>
+
+what is the Azile methodology
+
+what is the scrum
+
+what is the product backlog
+===========================
+login page 
+logout page 
+Home page
+
+Sprint:
+-------
+1)every piece of software evry 2 weeks
+2)Scrum master(or) product owner
+
+Sprint Planning
+================
+Scrum meeting:what did you do yesterday and wt gng to do tmrw and you faceing any abstacles
+
+Sprint Retospective meeting:
+----------------------------
+On the last day of sprint and end of the Sprint 
+
+Bug triage meeting:
+-------------------
+This is conducted by the my team lead or product Owner 
+before releasing of Sprint 
+
+Stories
+-------
+feature(or)Any module
+
+What is Epic 
+-------------
+Collection of the User Stories we called as the Epic
+
+Story point
+-----------
+1sp = 1 hr
+1sp = 1 hr
+>it should fallow the Fibonacci series 
+
+Swag: Two give particular Task and module by how much is called as the Swag
+=====
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

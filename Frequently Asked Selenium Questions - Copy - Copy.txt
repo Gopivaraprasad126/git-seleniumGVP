@@ -1,0 +1,29 @@
+Frequently Asked Selenium Questions:
+=======================================
+1)what is webDriver driver = new chromeDriver(); explain this Statement clearly?
+2)How to handle the multiple windows ?
+3)what are thee exceptions in selenium?
+4)how to handle the DropDowns?
+5)what are the intrfaces and what are the classes in selenium and explain about them ?
+^)how to synchronize the selenim webpages ,what are the waits and explain about them 
+write the syntax also?
+7)what is the Stale element and how u handle that?
+8)what is the difference between the "NoSuchElemnt exception"and elementfound not exception?
+9)what is the X-path and tell me about the differnt types of xpaths ?And which oneis Best?
+10) The element is not present the webpage how ill u go there what is ur papproach?
+11)how to handle the page up and page down actions without using Action class?
+12)hw to pass the values witout using sendkeys method
+13)what is the manage() how many methods it has 
+14)differnce between the driver.get and drivr.navigate?
+15) what is ur frame work and explain about its Structue?
+16)What is the POM(page obect model) have u used in ur project
+17)what is the hybrid work and explain it?
+18)Can u write the syntax for the drag and  drop of the elements 
+19)write the syntaxes of all wait statements where ur r used in project
+20)Where you maintain ur testdata and and how to get the data from the exteral sources
+21)Explain the some methods of wedriver and webelemrnt  interfaces
+22)Write the basic code for the login page in cucmber and ddt and including testng also?
+23)who will u trigger the testcases?
+24)which format this testcases are saved ?
+25)explain the maven build life cycle
+

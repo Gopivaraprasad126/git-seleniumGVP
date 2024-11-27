@@ -1,0 +1,146 @@
+  1)Window handles
+================
+public class Main{
+public static void main(String[] args){
+System.setProerty("Webdriver.Chrome.driver","chromedriver.exe");
+ WebDriver driver = new ChromeDriver();
+druver.get("https://google.com");
+String mwh = driver.getWindowHandle();
+WebElement element = driver.findElement(by.id("windowid")).click();
+Set<String> windowHandles = driver.getWindoHandles();
+for(String handle:windowHandles){
+if(!handle.equals(mwh)){
+driver.swithTo().window(handle);
+syso(handle.getText());
+break;
+driver.close();
+}
+}
+driver.swithTo().window(mwh);
+driver.quit();
+}
+}
+
+2)How hanle the multiple frames
+================================
+public class Main{
+public static void main(String[] args){
+System.setProerty("Webdriver.Chrome.driver","chromedriver.exe");
+ WebDriver driver = new ChromeDriver();
+driver.switchTo().frame("iframe1");
+driver.switchTo().frame(0);
+WebElement elementInFirstFrame = driver.findElement(By.id("element1"));
+        elementInFirstFrame.click();
+driver.switchTo().defaultContent();
+//if the frame has inner frame then that time we comeout that frame to 
+outside is use the
+driver.SwithTo().parentFrame();
+
+
+3)how to handle the DropDowns 
+=============================
+public class Main{
+public static void main(String[] args){
+System.setProerty("Webdriver.Chrome.driver","chromedriver.exe");
+ WebDriver driver = new ChromeDriver();
+driver.get("https://google.com");
+WebElement DDownElement = driver.findElement(By.id("did"));
+Select select = new Select(DDownElement);
+select.selectByvisibleText("gvp");
+select.selectByIndex(1);
+select.selectByvalue("gopi");
+
+if(DdownElement.isMultiple){
+list<WebElement> so = driver.getAllOptions();
+for(WebElement options:so){
+syso(options.getText();
+}
+}
+List<WebElement> allOptions = dropdown.getOptions();
+            System.out.println("Available options:");
+            for (WebElement option : allOptions) {
+                System.out.println(option.getText());
+            }
+
+            // To get the currently selected option
+            WebElement selectedOption = dropdown.getFirstSelectedOption();
+            System.out.println("Selected option: " + selectedOption.getText());
+driver.close();
+}
+}
+
+4)how to handle the Pop_ups:
+============================
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandleAlerts {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+
+        // Open the page with an alert
+        driver.get("https://www.example.com");
+
+WebElement element = driver.findElement(By.id("aid")).click();
+Alert alert = driver.swithTo().alert();
+String text = alert.getText();
+alert.accept();
+
+driver.quit();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
